@@ -1,5 +1,6 @@
 import React from "react";
 import countries from "../data/countries.json";
+import "./searchCountry.css";
 
 export const SearchCountry = () => {
   const [search, setSearch] = React.useState("");
@@ -8,6 +9,7 @@ export const SearchCountry = () => {
   return (
     <div>
       <input
+        className="search-input"
         type="text"
         value={search}
         onChange={(e) => {
@@ -19,11 +21,14 @@ export const SearchCountry = () => {
           );
         }}
       />
-      <ul>
+      <div className="search-results">
         {filteredCountries.map(({ country, city }) => (
-          <li key={country}>{country}</li>
+          <div className="search-result" key={country}>
+            <div className="search-result-country">{country}</div>
+            {/* <div className="search-result-city">{city}</div> */}
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
