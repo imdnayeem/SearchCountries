@@ -2,7 +2,7 @@ import React from "react";
 import countries from "../data/countries.json";
 import "./searchCountry.css";
 
-export const SearchCountry = () => {
+const SearchCountry = () => {
   const [search, setSearch] = React.useState("");
   const [filteredCountries, setFilteredCountries] = React.useState([]);
 
@@ -32,3 +32,5 @@ export const SearchCountry = () => {
     </div>
   );
 };
+
+export default SearchCountry;
