@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 const Pokedata = () => {
@@ -37,8 +37,7 @@ const Pokedata = () => {
   }, [pokemon]);
 
   return (
-    <div>
-      <h1>Pokemon Data</h1>
+    <>
       <table>
         <thead>
           <tr>
@@ -57,7 +56,7 @@ const Pokedata = () => {
           ))}
         </tbody>
       </table>
-    </div>
+    </>
   );
 };
 
